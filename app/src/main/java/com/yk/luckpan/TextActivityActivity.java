@@ -54,6 +54,7 @@ public class TextActivityActivity extends AppCompatActivity implements View.OnCl
     private LinearLayoutManager mLayoutManager = new LinearLayoutManager(this);
     private static final String URL =
             "http://dn-chunyu.qbox.me/fwb/static/images/home/video/video_aboutCY_A.mp4";
+    private static final String URL2="http://jzvd.nathen.cn/c6e3dc12a1154626b3476d9bf3bd7266/6b56c5f0dc31428083757a45764763b0-5287d2089db37e62345123a1be272f8b.mp4";
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -61,12 +62,11 @@ public class TextActivityActivity extends AppCompatActivity implements View.OnCl
         setContentView(R.layout.activity_text_activity);
         mRecyclerView = (RecyclerView) findViewById(R.id.video_watch_list);
 
-
         //添加视频数据
         for (int i = 0; i < 10; ++i) {
-            mLists.add(new OnlineVideoListItem(mVideoPlayerManager, "测试", "http://img5.imgtn.bdimg.com/it/u=3681511478,1131549205&fm=11&gp=0.jpg", URL));
+            mLists.add(new OnlineVideoListItem(mVideoPlayerManager, "一个人的舞蹈，你不会明白", "http://img5.imgtn.bdimg.com/it/u=3681511478,1131549205&fm=11&gp=0.jpg", URL));
+            mLists.add(new OnlineVideoListItem(mVideoPlayerManager, "My dance,Just for you! Wonderful", "http://p.qpic.cn/videoyun/0/2449_43b6f696980311e59ed467f22794e792_1/640", URL2));
         }
-
 
         mRecyclerView.setLayoutManager(mLayoutManager);
         VideoWatchAdapter adapter = new VideoWatchAdapter(mLists);

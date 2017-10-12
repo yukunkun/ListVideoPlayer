@@ -8,7 +8,6 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-
 import com.bumptech.glide.Glide;
 import com.yk.view.VideoListItem;
 import com.volokh.danylo.video_player_manager.ui.MediaPlayerWrapper;
